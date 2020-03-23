@@ -521,6 +521,10 @@ int main(int argc, char *argv[])
 
 						std::cout << "txt_filename_path = " << txt_filename_path << std::endl;
 
+						// change window title dynamically
+						cv::setWindowTitle(window_name, window_name + "  " + txt_filename_path);
+						////
+
 						std::ofstream ofs(txt_filename_path, std::ios::out | std::ios::trunc);
 						ofs << std::fixed;
 
